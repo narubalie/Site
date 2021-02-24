@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narubalie</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/grids.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="shortcut icon" type="image/svg" href="img/favicon.svg"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader__line"></div>
+        <div class="preloader__image">
+            <img src="img/narubalie-logo-appear-800х600x265.gif" alt="">
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div></div>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div id="sidebar">
+            <div class="center" style="height: 35%;">
+                <a class="logo" href="index.html">
+                    <img id="logo" src="img/logo.svg" alt="logo">
+                </a>
+            </div>
+            <div class="col-1 tabs-head">
+                <button class="sidenav-links active" onclick="openTab(event, 'products')"><img src="img/ic/products-white.svg" alt="products"></img>Products</button>
+                <button class="sidenav-links" onclick="openTab(event, 'dashboard')"><img src="img/ic/dashboard-white.svg" alt="dashboard"></img>Dashboard</button>
+                <button class="sidenav-links" onclick="openTab(event, 'orders')"><img src="img/ic/orders-white.svg" alt="orders"></img>Orders</button>
+                <button class="sidenav-links" onclick="openTab(event, 'users')"><img src="img/ic/users-white.svg" alt="users"></img>Users</button>
+                <button class="sidenav-links" onclick="openTab(event, 'settings')"><img src="img/ic/settings-white.svg" alt="settings"></img>Settings</button>
+            </div>
+        </div>
+        <div id="header" class="header">
+            <div class="area__icon">
+                <a href="index.html">
+                    <img id="burger-icon" src="img/ic/menu-white.svg" alt="logo">
+                </a>
+            </div>
+            <div id="empty-area"></div>
+            <div class="area__icon">
+                <a href="index.html">
+                    <img id="notify-icon" src="img/ic/notify-white.svg" alt="logo">
+                </a>
+            </div>
+            <div class="area__customer">
+                <a href="index.html">
+                    <img id="img-customer" class="img__customer" src="img/round.png" alt="logo">
+                </a>
+                <div class="data__customer">
+                    <p class="customer-name">Herman Narubalie</p>
+                    <p class="descr">Customer</p>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="products" class="tab-inner" style="display: block;">
+                <h1>Проекты</h1>
+                <div id="tagFilter">
+                    <button class="tag">Сайты</button>
+                    <button class="tag">Брендинг</button>
+                    <button class="tag">3D</button>
+                    <button class="tag selected">Всё</button>
+                </div>
+                <div id="projects" class="card-grid">
+                    <a href="https://2-berega.ru">
+                        <div class="card">
+                            <div class="card-text">
+                                <h2>2 Берега</h2>
+                                <button class="tag selected">Ре-Дизайн</button>
+                                <button class="tag selected">Сайт</button>
+                                <button class="tag selected">Доставка</button>
+                                <button class="tag selected">Еда</button>
+                                <p>Редизайн сайта доставки еды в Санкт-Петербурге</p>
+                                <span class="card-items">
+                                    <span class="left-card-items">
+                                        <p class="date">14/22/2018</p>
+                                    </span>
+                                    <span class="right-card-items">
+                                        <p class="likes">22</p>
+                                        <p class="views">125</p>
+                                    </span>
+                                </span>
+                            </div>
+                            <img class="card-cover" src="img/projects/cover_2berega.svg" alt="2berega">
+                        </div>
+                    </a>
+                    <a href="https://www.behance.net/gallery/88649083/hlebnaja-usadba">
+                        <div class="card">
+                            <div class="card-text">
+                                <h2>Хлебная Усадьба</h2>
+                                <button class="tag selected">Ре-Дизайн</button>
+                                <button class="tag selected">Сайт</button>
+                                <button class="tag selected">Пекарня</button>
+                                <button class="tag selected">Еда</button>
+                                <p>Редизайн сайта сети пекарен в Санкт-Петербурге</p>
+                                <span class="card-items">
+                                    <span class="left-card-items">
+                                        <p class="date">14/22/2018</p>
+                                    </span>
+                                    <span class="right-card-items">
+                                        <p class="likes">22</p>
+                                        <p class="views">125</p>
+                                    </span>
+                                </span>
+                            </div>
+                            <img class="card-cover" src="img/projects/cover_hlebnayausadba.svg" alt="2berega">
+                        </div>
+                    </a>
+                    <a href="https://estetik.ru/">
+                        <div class="card">
+                            <div class="card-text">
+                                <h2>Эстетик Клуб</h2>
+                                <button class="tag selected">Ре-Дизайн</button>
+                                <button class="tag selected">Сайт</button>
+                                <button class="tag selected">Медицина</button>
+                                <p>Редизайн сайта сети центров медицинской косметологии</p>
+                                <span class="card-items">
+                                    <span class="left-card-items">
+                                        <p class="date">14/22/2018</p>
+                                    </span>
+                                    <span class="right-card-items">
+                                        <p class="likes">22</p>
+                                        <p class="views">125</p>
+                                    </span>
+                                </span>
+                            </div>
+                            <img class="card-cover" src="img/projects/cover_esteticlub.svg" alt="2berega">
+                        </div>
+                    </a>
+                    <a href="https://centerprogress.ru/">
+                        <div class="card">
+                            <div class="card-text">
+                                <h2>УЦ Прогресс</h2>
+                                <button class="tag selected">Ре-Дизайн</button>
+                                <button class="tag selected">Сайт</button>
+                                <button class="tag selected">Образование</button>
+                                <p>Редизайн сайта сети учебных центров в Санкт-Петербурге</p>
+                                <span class="card-items">
+                                    <span class="left-card-items">
+                                        <p class="date">14/22/2018</p>
+                                    </span>
+                                    <span class="right-card-items">
+                                        <p class="likes">22</p>
+                                        <p class="views">125</p>
+                                    </span>
+                                </span>
+                            </div>
+                            <img class="card-cover" src="img/projects/cover_progress.svg" alt="2berega">
+                        </div>
+                    </a>
+                    <a href="https://kareliastone.tilda.ws/">
+                        <div class="card">
+                            <div class="card-text">
+                                <h2>Карельский Камень</h2>
+                                <button class="tag selected">Ре-Дизайн</button>
+                                <button class="tag selected">Сайт</button>
+                                <button class="tag selected">Тильда</button>
+                                <button class="tag selected">Камень</button>
+                                <p>Редизайн сайта официального дилера сразу трех карельских горных пород: шунгита, гранита и малинового кварцита</p>
+                                <span class="card-items">
+                                    <span class="left-card-items">
+                                        <p class="date">14/22/2018</p>
+                                    </span>
+                                    <span class="right-card-items">
+                                        <p class="likes">22</p>
+                                        <p class="views">125</p>
+                                    </span>
+                                </span>
+                            </div>
+                            <img class="card-cover" src="img/projects/cover_kareliastone.svg" alt="2berega">
+                        </div>
+                    </a>
+                    <a href="http://lik-market.ru/">
+                        <div class="card">
+                            <div class="card-text">
+                                <h2>Лик Маркет</h2>
+                                <button class="tag selected">Дизайн</button>
+                                <button class="tag selected">Сайт</button>
+                                <button class="tag selected">Тильда</button>
+                                <button class="tag selected">Камень</button>
+                                <p>Официальный дистрибьютор автотоваров и стройинструмента</p>
+                                <span class="card-items">
+                                    <span class="left-card-items">
+                                        <p class="date">14/22/2018</p>
+                                    </span>
+                                    <span class="right-card-items">
+                                        <p class="likes">22</p>
+                                        <p class="views">125</p>
+                                    </span>
+                                </span>
+                            </div>
+                            <img class="card-cover" src="img/projects/cover_likmarket.png" alt="2berega">
+                        </div>
+                    </a>
+                    <a href="https://borodaboroda.ru/">
+                        <div class="card">
+                            <div class="card-text">
+                                <h2>Борода Диджитал</h2>
+                                <button class="tag selected">Дизайн</button>
+                                <button class="tag selected">Лэндинг</button>
+                                <button class="tag selected">Тильда</button>
+                                <button class="tag selected">Агенство</button>
+                                <p>Продающая страница для брендингового агенства</p>
+                                <span class="card-items">
+                                    <span class="left-card-items">
+                                        <p class="date">14/22/2018</p>
+                                    </span>
+                                    <span class="right-card-items">
+                                        <p class="likes">22</p>
+                                        <p class="views">125</p>
+                                    </span>
+                                </span>
+                            </div>
+                            <img class="card-cover" src="img/projects/cover_boroda.svg" alt="2berega">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="dashboard" class="tab-inner">
+                <div class="controls">
+                    <button class="btn-big"><img src="img/ic/search-white.svg" alt="search">Search</button>
+                    <input class="big-search" placeholder="Orders..." type="text">
+                    <button class="btn-big white"><img src="img/ic/plus-white.svg" alt="plus">New</button>
+                </div>
+                <table class="scrollable">
+                    <colgroup>
+                        <col span="6">
+                        <col span="2" style="width: 46px;">
+                      </colgroup>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Date</th>
+                        <th>Product</th>
+                        <th>Status</th>
+                        <th colspan="2"></th>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag rejected">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag rejected">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag rejected">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag processing">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag processing">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag processing">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag on-hold">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag on-hold">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag on-hold">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag on-hold">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag on-hold">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>114234</td>
+                        <td>Heraldina Everectus</td>
+                        <td>Saint-Petersburg</td>
+                        <td>10/04/2019</td>
+                        <td>First</td>
+                        <td class="status__cell"><button class="status__tag completed">Completed</button></td>
+                        <td class="image__cell"><img src="img/ic/edit-white.svg" alt="edit"></td>
+                        <td class="image__cell"><img src="img/ic/delete-white.svg" alt="delete"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="orders" class="tab-inner"></div>
+            <div id="users" class="tab-inner"></div>
+            <div id="settings" class="tab-inner"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
